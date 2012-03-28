@@ -1,14 +1,13 @@
 {
     "name": "kindleit direct",
     "description": "Direct post to kindle via kindleit",
+    "id": "gjalghjcgbpgnfacpaifpdpllocnpbib",
     "version": "0.0.1",
     "permissions": [
         "tabs"
     ],
     "icons": {
-        "16": ".png"
     },
     "browser_action": {
-        "default_icon": "kindleit_32.png"
     }
 }
