@@ -22,8 +22,6 @@ $(function() {
     };
 
     $('#register').click(function() {
-//        insert_address($('#user').val + $('#domain').val);
-        insert_address('motihara@kindle.com');
-
+        insert_address($('#user').val() + $('#domain').val());
     });
 });
