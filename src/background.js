@@ -36,7 +36,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         var email = localStorage.getItem('email');
         post_kindleit(tab.url, email);
     } else {
-        // TODO emailアドレスが設定されていない場合は設定ページを開く
-        alert('please set your kindle email address');
+        chrome.tabs.create({
+            "url": chrome.extension.getURL("options.html"),
+        });
     }
 });
