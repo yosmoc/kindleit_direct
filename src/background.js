@@ -4,9 +4,11 @@ var post_kindleit = function(url, email) {
     var page_url = url;
     var email_id = email.split('@')[0];
     var email_domain = email.split('@')[1];
-    var page_url_and_email_address = '&url=' + encodeURIComponent(page_url)
-        + '&email=' + email_id
-        + '&domain=' + _domain_number(email_domain);
+    var page_url_and_email_address = {
+        url: page_url,
+        email: email_id,
+        domain: _domain_number(email_domain)
+    };
 
     $.ajax({
         type: "POST",
