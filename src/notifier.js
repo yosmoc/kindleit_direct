@@ -19,7 +19,7 @@ Notifier.prototype = {
         }
     },
 
-    nofify: function(icon, title, message) {
+    notify: function(icon, title, message) {
         if (webkitNotifications.permissionLevel === webkitNotifications.PERMISSION_ALLOWED) {
             var popup = webkitNotifications.createNotification(icon, title, message);
 
