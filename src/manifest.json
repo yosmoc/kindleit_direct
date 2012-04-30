@@ -5,7 +5,8 @@
     "version": "0.0.1",
     "permissions": [
         "tabs",
-        "http://fivefilters.org/kindle-it"
+        "http://fivefilters.org/kindle-it",
+        "notifications"
     ],
     "icons": {
         "16": "icon16.png",
