@@ -19,14 +19,14 @@ Notifier.prototype = {
         }
     },
 
-    notify: function(icon, title, message) {
+    notify: function(icon, title, message, timeout_ms) {
         if (webkitNotifications.permissionLevel === webkitNotifications.PERMISSION_ALLOWED) {
             var popup = webkitNotifications.createNotification(icon, title, message);
 
-            popup.ondisplay = function() {
-                // timeout時間未決定
-                setTimeout(function(){ popup.cancel(); }, 2000);
-            };
+            popup.ondisplay = function(timeout) {
+                setTimeout(function(){ popup.cancel(); }, timeout);
+            }(timeout_ms);
+
             popup.show();
         } else {
             return false;
