@@ -25,7 +25,7 @@ Notifier.prototype = {
 
             popup.ondisplay = function() {
                 // timeout時間未決定
-                setTimeout(function(){ popup.cancel(); }, 1000);
+                setTimeout(function(){ popup.cancel(); }, 2000);
             };
             popup.show();
         } else {
