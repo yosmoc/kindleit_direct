@@ -20,14 +20,16 @@ var post_kindleit = function(url, email) {
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Success';
             var description = 'Success to send kindle using kindleit';
-            notifier.notify(icon, header, description);
+            var timeout_ms  = 2000;
+            notifier.notify(icon, header, description, timeout_ms);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             // TODO: 失敗した時のアイコンを作成する
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Failed';
             var description = 'Fail to send kindle using kindleit. Try later.';
-            notifier.notify(icon, header, description);
+            var timeout_ms  = 4000;
+            notifier.notify(icon, header, description, timeout_ms);
         }
     });
 };
@@ -46,7 +48,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
         var icon        = chrome.extension.getURL('icon128.png');
         var header      = 'Send';
         var description = 'Send kindle by using kindleit';
-        notifier.notify(icon, header, description);
+        var timeout_ms  = 1500;
+        notifier.notify(icon, header, description, timeout_ms);
 
         // post
         var email = localStorage.getItem('email');
