@@ -22,6 +22,19 @@ $(function() {
     };
 
     $('#register').click(function() {
-        insert_address($('#user').val() + $('#domain').val());
+        var user = $('#user').val();
+        var domain = $('#domain').val();
+
+        if (user === '') {
+            alert('invalid value');
+        } else {
+            insert_address(user + domain);
+        }
+
+        // check
+        var email_from_localstrage = get_address();
+        if (email_from_localstrage[0] === user && email_from_localstrage[1] === domain) {
+            alert('OK');
+        }
     });
 });
