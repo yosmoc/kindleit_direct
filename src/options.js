@@ -14,10 +14,11 @@ $(function() {
     var email = get_address();
     if (email) {
         $('#user').val(email[0]);
+
         if (email[1] === 'free.kindle.com') {
-            $('#domain').val(1);
+            $('#domain').val('free.kindle.com');
         } else {
-            $('#domain').val(2);
+            $('#domain').val('kindle.com');
         }
     };
 
@@ -28,7 +29,7 @@ $(function() {
         if (user === '') {
             alert('invalid value');
         } else {
-            insert_address(user + domain);
+            insert_address(user + '@' + domain);
         }
 
         // check
