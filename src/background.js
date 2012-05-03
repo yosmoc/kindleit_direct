@@ -2,6 +2,12 @@ var BASE_URL = 'http://fivefilters.org/kindle-it/send.php?context=send';
 var notifier = new Notifier();
 
 var post_kindleit = function(url, email) {
+    var icon        = chrome.extension.getURL('icon128.png');
+    var header      = 'Send';
+    var description = 'Send kindle by using kindleit';
+    var timeout_ms  = 1500;
+    notifier.notify(icon, header, description, timeout_ms);
+
     var page_url = url;
     var email_id = email.split('@')[0];
     var email_domain = email.split('@')[1];
@@ -44,13 +50,6 @@ var _domain_number = function(domain) {
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     if (localStorage.getItem('email')) {
-        // notify
-        var icon        = chrome.extension.getURL('icon128.png');
-        var header      = 'Send';
-        var description = 'Send kindle by using kindleit';
-        var timeout_ms  = 1500;
-        notifier.notify(icon, header, description, timeout_ms);
-
         // post
         var email = localStorage.getItem('email');
         post_kindleit(tab.url, email);
