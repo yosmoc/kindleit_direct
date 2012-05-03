@@ -22,7 +22,6 @@ var post_kindleit = function(url, email) {
         url: BASE_URL,
         data: page_url_and_email_address,
         success: function(msg) {
-            alert(msg);
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Success';
             var description = 'Success to send kindle using kindleit';
