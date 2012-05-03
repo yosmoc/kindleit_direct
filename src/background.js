@@ -49,22 +49,22 @@ var _domain_number = function(domain) {
 chrome.browserAction.onClicked.addListener(function(tab) {
     if ((tab.url.indexOf('http:') == 0 || tab.url.indexOf('https:') == 0) &&
         tab.url.indexOf('fivefilters.org/kindle-it/send.php'.toLowerCase()) == -1) {
-    if (localStorage.getItem('email')) {
-        // post
-        var email = localStorage.getItem('email');
-        post_kindleit(tab.url, email);
-    } else {
-        // go to email setting page
-        chrome.tabs.create({
-            "url": chrome.extension.getURL("options.html")
-        });
-    }
+        if (localStorage.getItem('email')) {
+            // post
+            var email = localStorage.getItem('email');
+            post_kindleit(tab.url, email);
+        } else {
+            // go to email setting page
+            chrome.tabs.create({
+                "url": chrome.extension.getURL("options.html")
+            });
+        }
     } else { // not http or https
-    var icon        = chrome.extension.getURL('icon128.png');
-    var header      = 'Failed';
-    var description = 'This page is not http:// or https://';
-    var timeout_ms  = 4000;
-    notifier.notify(icon, header, description, timeout_ms);
+        var icon        = chrome.extension.getURL('icon128.png');
+        var header      = 'Failed';
+        var description = 'This page is not http:// or https://';
+        var timeout_ms  = 4000;
+        notifier.notify(icon, header, description, timeout_ms);
     }
 });
 
@@ -76,14 +76,14 @@ chrome.contextMenus.create({
     "onclick"  : function(info, tab) {
         if ((info.pageUrl.indexOf('http:') == 0 || info.pageUrl.indexOf('https:') == 0) &&
             info.pageUrl.indexOf('fivefilters.org/kindle-it/send.php'.toLowerCase()) == -1) {
-        if (localStorage.getItem('email')) {
-            var email = localStorage.getItem('email');
-            post_kindleit(info.pageUrl, email);
-        } else {
-            chrome.tabs.create({
-                "url": chrome.extension.getURL("options.html")
-            });
-        }
+            if (localStorage.getItem('email')) {
+                var email = localStorage.getItem('email');
+                post_kindleit(info.pageUrl, email);
+            } else {
+                chrome.tabs.create({
+                    "url": chrome.extension.getURL("options.html")
+                });
+            }
         } else {
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Failed';
@@ -101,14 +101,14 @@ chrome.contextMenus.create({
     "onclick"  : function(info, tab) {
         if ((info.linkUrl.indexOf('http:') == 0 || info.linkUrl.indexOf('https:') == 0) &&
             info.linkUrl.indexOf('fivefilters.org/kindle-it/send.php'.toLowerCase()) == -1) {
-        if (localStorage.getItem('email')) {
-            var email = localStorage.getItem('email');
-            post_kindleit(info.linkUrl, email);
-        } else {
-            chrome.tabs.create({
-                "url": chrome.extension.getURL("options.html")
-            });
-        }
+            if (localStorage.getItem('email')) {
+                var email = localStorage.getItem('email');
+                post_kindleit(info.linkUrl, email);
+            } else {
+                chrome.tabs.create({
+                    "url": chrome.extension.getURL("options.html")
+                });
+            }
         } else {
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Failed';
