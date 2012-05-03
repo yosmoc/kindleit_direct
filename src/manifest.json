@@ -4,6 +4,8 @@
     "id": "ljjpaogbkhfbmbcamjdchjjfpcopjafm",
     "version": "0.0.3",
     "permissions": [
+        "http://*/*",
+        "https://*/*",
         "tabs",
         "http://fivefilters.org/kindle-it",
         "notifications",
