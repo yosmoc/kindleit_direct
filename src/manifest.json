@@ -2,7 +2,7 @@
     "name": "kindleit direct",
     "description": "Direct post webpage to kindle via kindleit",
     "id": "ljjpaogbkhfbmbcamjdchjjfpcopjafm",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "permissions": [
         "tabs",
         "http://fivefilters.org/kindle-it",
