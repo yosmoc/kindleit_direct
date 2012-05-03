@@ -21,14 +21,14 @@ var post_kindleit = function(url, email) {
         type: "POST",
         url: BASE_URL,
         data: page_url_and_email_address,
-        success: function(msg) {
+        success: function(data, textStatus, xhr) {
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Success';
             var description = 'Success to send kindle using kindleit';
             var timeout_ms  = 2000;
             notifier.notify(icon, header, description, timeout_ms);
         },
-        error: function(XMLHttpRequest, textStatus, errorThrown){
+        error: function(xhr, textStatus, errorThrown){
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Failed';
             var description = 'Fail to send kindle using kindleit. Try later.';
