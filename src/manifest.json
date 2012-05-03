@@ -6,7 +6,8 @@
     "permissions": [
         "tabs",
         "http://fivefilters.org/kindle-it",
-        "notifications"
+        "notifications",
+        "contextMenus"
     ],
     "icons": {
         "16": "icon16.png",

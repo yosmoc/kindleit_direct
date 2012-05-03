@@ -55,7 +55,41 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     } else {
         // go to email setting page
         chrome.tabs.create({
-            "url": chrome.extension.getURL("options.html"),
+            "url": chrome.extension.getURL("options.html")
         });
     }
 });
+
+// contextMenus
+// page
+chrome.contextMenus.create({
+    "title"    : 'Post this page to Kindle',
+    "contexts" : ['page'],
+    "onclick"  : function(info, tab) {
+        if (localStorage.getItem('email')) {
+            var email = localStorage.getItem('email');
+            post_kindleit(info.pageUrl, email);
+        } else {
+            chrome.tabs.create({
+                "url": chrome.extension.getURL("options.html")
+            });
+        }
+    }
+});
+
+// link
+chrome.contextMenus.create({
+    "title"    : 'Post this link to Kindle',
+    "contexts" : ['link'],
+    "onclick"  : function(info, tab) {
+        if (localStorage.getItem('email')) {
+            var email = localStorage.getItem('email');
+            post_kindleit(info.linkUrl, email);
+        } else {
+            chrome.tabs.create({
+                "url": chrome.extension.getURL("options.html")
+            });
+        }
+    }
+});
+
