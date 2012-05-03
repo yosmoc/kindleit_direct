@@ -22,7 +22,7 @@ var post_kindleit = function(url, email) {
         url: BASE_URL,
         data: page_url_and_email_address,
         success: function(msg) {
-            // TODO: 成功した時のアイコンを作成する
+            alert(msg);
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Success';
             var description = 'Success to send kindle using kindleit';
@@ -30,7 +30,6 @@ var post_kindleit = function(url, email) {
             notifier.notify(icon, header, description, timeout_ms);
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
-            // TODO: 失敗した時のアイコンを作成する
             var icon        = chrome.extension.getURL('icon128.png');
             var header      = 'Failed';
             var description = 'Fail to send kindle using kindleit. Try later.';
