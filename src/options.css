@@ -7,7 +7,8 @@ html, body {
     margin: 0;
     line-height: 1.66;
     color: #333;
-    font-family:'Helvetica','Arial','Hiragino Kaku Gothic Pro',Meiryo,'MS PGothic',sans-serif;
+    
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a{
