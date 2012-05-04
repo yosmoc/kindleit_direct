@@ -2,7 +2,7 @@
     "name": "kindleit direct",
     "description": "Direct post webpage to kindle via kindleit",
     "id": "ljjpaogbkhfbmbcamjdchjjfpcopjafm",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "permissions": [
         "http://*/*",
         "https://*/*",
