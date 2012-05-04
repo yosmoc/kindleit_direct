@@ -28,6 +28,9 @@ $(function() {
 
         if (user === '') {
             $('#result').text('Invalid value. Please input your kindle email address.');
+            $('#result').css({
+                "background-color": "#ee827c"
+            });
             $('#result').show();
         } else {
             insert_address(user + '@' + domain);
@@ -37,6 +40,9 @@ $(function() {
         var email_from_localstrage = get_address();
         if (email_from_localstrage[0] === user && email_from_localstrage[1] === domain) {
             $('#result').text('Saved!');
+            $('#result').css({
+                "background-color": "#98d98e"
+            });
             $('#result').show();
         }
     });
