@@ -1,14 +1,74 @@
-body {
-    width: 350px;
-}
-
 html, body {
     padding: 0;
     margin: 0;
-    line-height: 1.66;
-    color: #333;
-    
+    line-height: 1.4;
+    color: #222;
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #EEE;
+}
+
+.content
+{
+    width: 750px;
+    height:300px;
+    border-color: #DFDFDF;
+    border-width: 2px;
+    border-style: solid;
+
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    position: relative;
+    text-align: left;
+}
+.content::after
+{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    right: 10px;
+    left: auto;
+    width: 50%;
+    top: 80%;
+    max-width:300px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
+    box-shadow: 0 15px 10px #777;
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#header h1 {
+    font-size: 130%;
+    font-weight: normal;
+}
+
+#mail {
+    margin-left: 10px;
+}
+
+#input {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#result {
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 1px;
+    padding-buttom: 1px;
+    color: white;
+}
+
+#help {
+    margin-top: 20px;
 }
 
 a{

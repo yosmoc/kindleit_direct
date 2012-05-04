@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <script src="jquery-1.6.1.min.js"></script>
     <script src="options.js"></script>
-    <link rel="stylesheet" type="text/css" href="popup.css" charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="options.css" charset="utf-8" />
   </head>
   <body>
-    <div id="mail">
-      Please input your email address using kindle.
-      <div class="input">
+    <div class="content">
+      <div id="header">
+        <h1>Kindle It Setting</h1>
+      </div>
+
+      <div id="mail">
+        Please input your email address using kindle.
+        <div id="input">
           <input id="user" size ="20" type="text">
           @
           <select id="domain" name="domain">
@@ -19,10 +24,17 @@
           <input id="register" type="submit" value="Register">
           <span id="result" style="display: none">
           </span>
+          </div>
+          <hr>
+          <div id="help">
+            To use this service you will need to:
+            <ol>
+              <li>Enter your Kindle email address and register.</li>
+              <li>Add the 'Send from' address to your Amazon approved list (or change it to one already in your approved list)</li>
+            </ol>
+            If you need help, we have <a target="_blank" href="http://help.fivefilters.org/customer/portal/articles/178337-kindle-e-mail-address">Detailed Instructions</a>. We will not share these details with anyone else.
+          </div>
       </div>
-    </div>
-    <div id="">
-      
     </div>
   </body>
 </html>
