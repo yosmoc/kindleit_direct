@@ -1,6 +1,6 @@
 {
     "name": "kindleit direct",
-    "description": "Direct post webpage to kindle via kindleit",
+    "description": "Post webpage to kindle directly by using kindleit",
     "id": "ljjpaogbkhfbmbcamjdchjjfpcopjafm",
     "version": "0.0.6",
     "permissions": [
