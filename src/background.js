@@ -1,5 +1,13 @@
 var BASE_URL = 'http://fivefilters.org/kindle-it/send.php?context=send';
-var notifier = new Notifier();
+
+var notifier = {
+    notify: function(icon, title, message, timeout_ms) {
+        var notification = new Notification(title, {body: message, icon: icon});
+        notification.onshow = function() {
+            setTimeout(function(){notification.close();}, timeout_ms);
+        };
+    }
+};
 
 var post_kindleit = function(url, email) {
     var icon        = chrome.extension.getURL('icon128.png');
