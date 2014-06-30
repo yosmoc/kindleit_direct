@@ -4,7 +4,7 @@
     "id": "ljjpaogbkhfbmbcamjdchjjfpcopjafm",
     "manifest_version": 2,
     "minimum_chrome_version": "35",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "permissions": [
         "http://*/*",
         "https://*/*",
