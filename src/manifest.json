@@ -6,10 +6,9 @@
     "minimum_chrome_version": "35",
     "version": "1.0.1",
     "permissions": [
-        "http://*/*",
-        "https://*/*",
-        "tabs",
         "http://fivefilters.org/kindle-it",
+        "https://fivefilters.org/kindle-it",
+        "activeTab",
         "notifications",
         "contextMenus"
     ],
